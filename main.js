@@ -134,13 +134,13 @@ switch (time) {
 // 3 задание
 var one = +prompt("Enter first number: ");
 var two = +prompt("Enter second number: ");
-var three = +prompt("Enter second number: ");
+var three = +prompt("Enter third number: ");
 
-if(one > two || two < three ) {
-     alert(two);
-     } else if(two > one || one < three  ) {
+if((one < two && one > three) || (one > two && one < three)) {
      alert(one);
- } else if (one > three || three < two) {
+     } else if((two < one && two > three) || (two > one && two < three)) {
+     alert(two);
+ } else if ((three < one && three > two) || (three > one && three < two)) {
      alert(three);
  } else {
      alert("Error!");
